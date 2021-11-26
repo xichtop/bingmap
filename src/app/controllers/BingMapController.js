@@ -27,14 +27,14 @@ class CategoryController {
     }
 
     async getDistanceByAddress(req, res) {
-        const { addressFisrt, addressSecond } = req.body;
+        const { addressFirst, addressSecond } = req.body;
 
         const getAddressFirst = async () => {
             try {
                 return await axios.get('http://dev.virtualearth.net/REST/v1/Locations', {
                     params: {
                         countryRegion: 'VN',
-                        addressLine: addressFisrt,
+                        addressLine: addressFirst,
                         key: 'AtUVSOyr-oTDbLTFydFECzMEU0ueEbG9CLutAXP7MyMtQnv6uKZSyYVEbyGZyqfc'
                     }
                 })
