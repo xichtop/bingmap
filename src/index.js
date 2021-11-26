@@ -13,7 +13,7 @@ app.use(cors())
 app.use(express.static(path.join(__dirname, 'public')));
 
 // HTTP Logger
-      app.use(morgan('combined'));
+//       app.use(morgan('combined'));
 
 // Middleware
 app.use(
@@ -25,14 +25,14 @@ app.use(
 app.use(express.json());
 
 //Template Engine
-app.engine(
-    'hbs',
-    handlebars({
-        extname: '.hbs',
-    }),
-);
-app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname, 'resources/views'));
+// app.engine(
+//     'hbs',
+//     handlebars({
+//         extname: '.hbs',
+//     }),
+// );
+// app.set('view engine', 'hbs');
+// app.set('views', path.join(__dirname, 'resources/views'));
 
 //Route init
 route(app);
