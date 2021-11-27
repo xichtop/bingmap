@@ -22,7 +22,7 @@ class CategoryController {
         const results = await getAddress()
         res.json({
             lat: results.data.resourceSets[0].resources[0].point.coordinates[0],
-            long: results.data.resourceSets[0].resources[0].point.coordinates[1],
+            lng: results.data.resourceSets[0].resources[0].point.coordinates[1],
         })
     }
 
